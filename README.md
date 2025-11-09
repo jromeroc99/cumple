@@ -2,9 +2,9 @@
 
 Aplicación web para calcular tu edad exacta y cuenta regresiva hasta tu próximo cumpleaños en tiempo real.
 
-## � Demo
+## 🕑 ¿Quieres saber cuanto falta?
 
-**Producción:** [https://www.javiromero.es/cumple/](https://www.javiromero.es/cumple/)
+[https://www.javiromero.es/cumple/](https://www.javiromero.es/cumple/)
 
 ## 🚀 Desarrollo
 
