@@ -1,7 +1,27 @@
 # 🎂 Contador de Cumpleaños
 
-Aplicación web para visualizar el tiempo restante hasta tu cumpleaños en tiempo real.
+Aplicación web para calcular tu edad exacta y cuenta regresiva hasta tu próximo cumpleaños en tiempo real.
 
-## 🎯 Propósito
+## � Demo
 
-Mostrar un contador dinámico que actualiza en tiempo real los meses, días, horas y segundos que faltan para tu próximo cumpleaños.
+**Producción:** [https://www.javiromero.es/cumple/](https://www.javiromero.es/cumple/)
+
+## 🚀 Desarrollo
+
+```bash
+# Clonar repositorio
+git clone https://github.com/jromeroc99/cumple.git
+cd cumple/cumple_simple
+
+# Iniciar servidor PHP
+php -S localhost:8000
+
+# Abrir en navegador
+http://localhost:8000
+```
+
+## 🛠️ Stack
+
+- PHP 7+
+- JavaScript (ES6)
+- CSS3
