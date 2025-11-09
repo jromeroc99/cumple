@@ -91,77 +91,14 @@ $timestamp_cumple = $fecha_cumple->getTimestamp() * 1000;
     </div>
     <br>
     <a href="index.php">Calcular otra fecha</a>
+    
     <script>
-        function mostrarMensaje() {
-            const mensaje = document.getElementById('mensajePaula');
-            const boton = document.getElementById('btnMensaje');
-            if (mensaje.style.display === 'none') {
-                mensaje.style.display = 'block';
-                boton.textContent = '❌ Ocultar mensaje';
-            } else {
-                mensaje.style.display = 'none';
-                boton.textContent = '💌 Mensaje especial para ti';
-            }
-        }
-        
+        // Pasar datos de PHP a JavaScript
         const proximoCumple = <?php echo $timestamp_proximo; ?>;
         const fechaCumple = <?php echo $timestamp_cumple; ?>;
         const haNacido = <?php echo $ha_nacido ? 'true' : 'false'; ?>;
-        
-        function actualizarEdad() {
-            const ahora = new Date().getTime();
-            const diferencia = Math.abs(ahora - fechaCumple);
-            
-            const segundos = Math.floor(diferencia / 1000);
-            const minutos = Math.floor(segundos / 60);
-            const horas = Math.floor(minutos / 60);
-            const dias = Math.floor(horas / 24);
-            const meses = Math.floor(dias / 30.44);
-            const anos = Math.floor(dias / 365.25);
-            
-            const diasRestantes = Math.floor(dias % 365.25);
-            const mesesRestantes = Math.floor(diasRestantes / 30.44);
-            const diasFinales = Math.floor(diasRestantes % 30.44);
-            const horasFinales = Math.floor(horas % 24);
-            const minutosFinales = Math.floor(minutos % 60);
-            const segundosFinales = Math.floor(segundos % 60);
-            
-            document.getElementById('edad-anos').textContent = anos;
-            document.getElementById('edad-meses').textContent = mesesRestantes;
-            document.getElementById('edad-dias').textContent = diasFinales;
-            document.getElementById('edad-horas').textContent = horasFinales;
-            document.getElementById('edad-minutos').textContent = minutosFinales;
-            document.getElementById('edad-segundos').textContent = segundosFinales;
-        }
-        
-        function actualizar() {
-            const ahora = new Date().getTime();
-            const diferencia = proximoCumple - ahora;
-            
-            if (diferencia <= 0) {
-                document.getElementById('contador').innerHTML = '¡FELIZ CUMPLEAÑOS!';
-                return;
-            }
-            
-            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-            
-            document.getElementById('dias').textContent = dias;
-            document.getElementById('horas').textContent = horas;
-            document.getElementById('minutos').textContent = minutos;
-            document.getElementById('segundos').textContent = segundos;
-        }
-        
-        function actualizarTodo() {
-            actualizarEdad();
-            actualizar();
-        }
-        
-        setInterval(actualizarTodo, 1000);
-        actualizarTodo();
     </script>
+    <script src="actualizador.js"></script>
     </div>
 </body>
 </html>
